@@ -18,7 +18,10 @@
   <ion-searchbar></ion-searchbar>
 </div>
 
-<ion-grid>
+<div class="px-1" *ngIf="ready">
+  <app-discover-grid></app-discover-grid>
+</div>
+<!-- <ion-grid>
     <ion-row class="row_1">
       <ion-col class="col_1">
         <ion-icon name="bed-outline" class="icon_dis" size='large'></ion-icon>Accommodation
@@ -41,7 +44,7 @@
         <ion-icon name="heart" size='10' class="icon_dis" size='large'></ion-icon>Weddings
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid> -->
 <ion-button color="primary" class="btn_topA" animated>TOP ATTRACTIONS</ion-button>
 <ion-header class="keepUp">Keep up with Tulbagh</ion-header>
 

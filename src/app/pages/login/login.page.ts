@@ -51,7 +51,7 @@ export class LoginPage implements OnInit {
       .then((success) => {
         console.log(success);
         if (success) {
-          this.navCtrl.navigateBack('');
+            this.navCtrl.navigateBack('');
         }
       });
   }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { LikedQuery, LikedService } from 'src/app/stores/liked';
 
 @Component({
   selector: 'app-tab4',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab4Page implements OnInit {
 
-  constructor() { }
+  constructor(
+    private likedService: LikedService,
+    public likedQuery: LikedQuery,
+    private navCtrl: NavController
+  ) { }
 
   ngOnInit() {
   }
 
+  ionViewWillEnter() {
+    this.likedService.getList();
+  }
+
+  goTo(profile) {
+    this.navCtrl.navigateForward('business-info', {
+      state: { profile },
+    });
+  }
 }
