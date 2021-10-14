@@ -1,0 +1,116 @@
+// .register_form {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+
+ion-toolbar {
+  --ion-background-color: #174060;
+  --color: white;
+}
+
+.register_btn {
+  background-color: #174060;
+}
+
+ion-title {
+  color: white;
+}
+
+.register_form img {
+  width: 60%;
+  height: 180px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.label_descr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // flex-direction: column;
+  margin: 40px;
+  width: 100%;
+}
+
+ion-button {
+  width: 65%;
+}
+//   ion-item ion-input{
+//     width: 70%;
+//     // @apply border border-solid rounded-lg my-3;
+//     // --padding-start: 10px;
+//     // --background: var(--ion-color-white);
+//     // --color: var(--ion-color-dark);
+//   }
+// .input_form[_ngcontent-ysa-c139]{
+//     --placeholder-color: black;
+// }
+ion-content {
+  --ion-background-color: #78B1F5;
+}
+.register_page {
+  background: #78B1F5;
+}
+.logo_img,
+.register_btn,
+.footer {
+  width: 100%;
+  background: #78B1F5;
+  display: flex;
+  justify-content: center;
+}
+
+.all_content {
+  display: flex;
+  justify-content: center;
+}
+
+.register_form {
+  margin: 10px;
+  padding: 20px;
+  background: #78B1F5;
+}
+
+.input_form {
+  border-radius: 10px;
+  background: white;
+  --placeholder-color: black;
+  --padding-start: 5px;
+}
+
+::placeholder {
+  color: black;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.cmLogo {
+  height: 100px;
+}
+
+// ion-color-primary: #3880FF;
+// --ion-color-primary-rgb: 56, 128, 255;
+// --ion-color-primary-contrast: #ffffff;
+// --ion-color-primary-contrast-rgb: 255, 255, 255;
+// --ion-color-primary-shade: #3171e0;
+// --ion-color-primary-tint: #4c8dff;
+// --ion-color-secondary: #3dc2ff;
+// --ion-color-secondary-rgb: 61, 194, 255;
+// --ion-color-secondary-contrast: #ffffff;
+// --ion-color-secondary-contrast-rgb: 255, 255, 255;
+// --ion-color-secondary-shade: #36abe0;
+// --ion-color-secondary-tint: #50c8ff;
+// --ion-color-tertiary: #5260ff;
+// --ion-color-tertiary-rgb: 82, 96, 255;
+// --ion-color-tertiary-contrast: #ffffff;
+// --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+// --ion-color-tertiary-shade: #4854e0;
+// --ion-color-tertiary-tint: #6370ff;
+// --ion-color-success: #2dd36f;

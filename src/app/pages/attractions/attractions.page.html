@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button></ion-back-button>
+    <ion-title>Top Attractions</ion-title>
+    <ion-icon name="notifications" slot="end"></ion-icon>
+    <ion-icon name="menu" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="attraction" color="dark">
+    <ion-header>Oude Kerk Volksmuseum</ion-header>
+    <ion-icon size="large" name="walk"></ion-icon>
+  </ion-card>
+  <ion-card class="attraction" color="tertiary">
+    <ion-header>Waterfall Hiking Trail</ion-header>
+    <ion-icon size="large" name="walk"></ion-icon>
+  </ion-card>
+  <ion-card class="attraction" color="primary">
+    <ion-header>Oudekloof Scenic Tractor Ride</ion-header>
+    <ion-icon size="large" name="walk"></ion-icon>
+  </ion-card>
+  <ion-card class="attraction" color="secondary">
+    <ion-header>De Oude Drostdy Museum</ion-header>
+    <ion-icon size="large" name="walk"></ion-icon>
+  </ion-card>
+  <ion-card class="attraction" color="medium">
+    <ion-header>Oakhurst Olives</ion-header>
+    <ion-icon size="large" name="ribbon"></ion-icon>
+  </ion-card>
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Discover</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2">
+      <ion-icon name="megaphone"></ion-icon>
+      <ion-label>What's Happening</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Events</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="./tab4.page">
+      <ion-icon name="thumbs-up"></ion-icon>
+      <ion-label>Liked</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button page="tab5.page">
+      <ion-icon name="star"></ion-icon>
+      <ion-label>Tulbagh</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

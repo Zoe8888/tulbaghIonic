@@ -1,0 +1,18 @@
+ion-toolbar {
+  --ion-background-color: #174060;
+  --color: white;
+}
+
+.title {
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+.event {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: gray;
+}

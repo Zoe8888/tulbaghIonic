@@ -1,0 +1,79 @@
+.loginPage {
+  background: #78B1F5;
+}
+
+ion-toolbar,
+.loginBtn {
+  --ion-background-color: #174060;
+}
+
+ion-title {
+  color: white;
+}
+
+ion-content {
+  --ion-background-color: #78B1F5;
+}
+
+.loginForm {
+  margin: 10px;
+  background: #78B1F5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loginForm img {
+  width: 60%;
+  height: 120px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.loginInput {
+  border-radius: 10px;
+  background: white;
+  --placeholder-color: black;
+  --padding-start: 5px;
+}
+
+::placeholder {
+  color: black;
+}
+
+.forgotPass {
+  display: flex;
+  align-self: flex-end;
+}
+
+.noAcc {
+  font-size: 0.9rem;
+}
+
+.noAcc span {
+  font-weight: 700;
+}
+
+ion-button {
+  width: 65%;
+}
+
+.image,
+.loginBtn {
+  width: 100%;
+  background: #78B1F5;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.cmLogo {
+  height: 100px;
+}

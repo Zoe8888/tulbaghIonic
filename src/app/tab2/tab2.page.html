@@ -1,17 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
+    <ion-title class="title">
+      What's Hapenning
     </ion-title>
+    <ion-icon name="notifications" slot="end"></ion-icon>
+    <ion-icon name="menu" slot="end"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">What's happening this weekend</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-grid>
+    <ion-row class="row">
+      <div class="event">
+        <img src="https://www.sleeping-out.co.za/ftp/Events/Tulbagh-Christmas-in-Winter-2019-15645.jpg" alt="">
+      </div>
+    </ion-row>
+    <ion-row class="row">
+      <div class="concert">
+        <img src="https://i.pinimg.com/originals/6e/8e/f4/6e8ef4fa00a4a5a589d94d27c594e8d5.jpg" alt="">
+      </div>
+    </ion-row>
+    <ion-row class="row">
+      <div class="menu">
+        <img src="https://10619-2.s.cdn12.com/rests/original/321_509830846.jpg" alt="">
+      </div>
+    </ion-row>
+    <ion-row class="row">
+      <div class="tour">
+        <img src="https://s3.af-south-1.amazonaws.com/entryninja-uploads/editor-uploads%2F1624946650591-TulbaghMTBtour.jpg" alt="">
+      </div>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

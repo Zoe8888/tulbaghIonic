@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Accommodations</ion-title>
+    <ion-icon name="notifications" slot="end"></ion-icon>
+    <ion-icon name="menu" slot="end"></ion-icon>
+  </ion-toolbar>
+  <ion-searchbar></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-chip>
+    <ion-icon name="swap-vertical"></ion-icon>
+    <ion-label>Sort</ion-label>
+  </ion-chip>
+
+  <div class="cardContainer">
+    <ion-card class="card">
+      <div>
+        <img src="assets/images/accommodations/reflections.jpg" width="100px" alt="">
+      </div>
+      <ion-title class="title">Reflections Guest Farm</ion-title>
+      <ion-card-subtitle>1.2km</ion-card-subtitle>
+    </ion-card>
+    <ion-card class="card">
+      <div>
+        <img src="assets/images/accommodations/raptor.jpg" width="100px" alt="">
+      </div>
+      <ion-title class="title">Raptor Rise Guest Farm</ion-title>
+      <ion-card-subtitle>1.9km</ion-card-subtitle>
+    </ion-card>
+    <ion-card class="card">
+      <div>
+        <img src="assets/images/accommodations/essere.png" width="100px" alt="">
+      </div>
+      <ion-title class="title">Essere Lodge</ion-title>
+      <ion-card-subtitle>11.7km</ion-card-subtitle>
+    </ion-card>
+    <ion-card class="card">
+      <div>
+        <img src="assets/images/accommodations/epi.jpg" width="100px" alt="">
+      </div>
+      <ion-title class="title">Epi Spa</ion-title>
+      <ion-card-subtitle>16.5km</ion-card-subtitle>
+    </ion-card>
+    <ion-card class="card">
+      <div>
+        <img src="assets/images/accommodations/manor.jpg" width="100px" alt="">
+      </div>
+      <ion-title class="title">Witterdrift Manor House</ion-title>
+      <ion-card-subtitle>37.4km</ion-card-subtitle>
+    </ion-card>
+    <ion-card class="card">
+      <div>
+        <img src="assets/images/accommodations/1.jpg" width="100px" alt="">
+      </div>
+      <ion-title class="title">The Tulbagh Boutique Heritage Hotel</ion-title>
+      <ion-card-subtitle>43.6km</ion-card-subtitle>
+    </ion-card>
+    <ion-card class="card">
+      <div>
+        <img src="assets/images/accommodations/cottage.jpg" width="100px" alt="">
+      </div>
+      <ion-title class="title">Bergsicht Country Cottage</ion-title>
+      <ion-card-subtitle>51.2km</ion-card-subtitle>
+    </ion-card>
+    <ion-card class="card">
+      <div>
+        <img src="assets/images/accommodations/sky.jpg" width="100px" alt="">
+      </div>
+      <ion-title>Big Sky Villa</ion-title>
+      <ion-card-subtitle>67.2km</ion-card-subtitle>
+    </ion-card>
+  </div>
+
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Discover</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2">
+      <ion-icon name="megaphone"></ion-icon>
+      <ion-label>What's Happening</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Events</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="./tab4.page">
+      <ion-icon name="thumbs-up"></ion-icon>
+      <ion-label>Liked</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button page="tab5.page">
+      <ion-icon name="star"></ion-icon>
+      <ion-label>Tulbagh</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

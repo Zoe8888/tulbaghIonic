@@ -1,0 +1,13 @@
+ion-toolbar {
+  --ion-background-color: #174060;
+  --color: white;
+}
+
+.attraction {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
