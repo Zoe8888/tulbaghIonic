@@ -1,15 +1,51 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start" (click)="showAbout()">
+      <ion-button>About</ion-button>
+    </ion-buttons>
     <ion-title>
       Visit Tulbagh
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-menu-button></ion-menu-button>
+      </ion-button>
+    </ion-buttons>
     <ion-icon name="notifications" slot="end"></ion-icon>
     <ion-icon name="menu" slot="end"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
+  <ion-grid class="absolute" *ngIf="weather.today | async as today">
+    <ion-row>
+      <ion-col size="auto">
+        <ion-card
+          class="ion-no-margin"
+          (click)="showWeather()"
+          color="primary"
+        >
+          <ion-item lines="none" color="primary">
+            <ion-avatar slot="start">
+              <ion-img
+                [src]="'assets/icon/weather/'+today?.weather?.[0]?.icon+'.png'"
+              ></ion-img>
+            </ion-avatar>
+            <ion-label class="text-center">
+              <h2 class="!font-bold">
+                {{today?.main?.temp|number: '1.0-0'}}°C
+              </h2>
+              <p>{{today?.weather?.[0]?.main}}</p>
+              <!-- <small>
+                L: {{today?.main?.temp_min|number: '1.0-0'}} - H:
+                {{today?.main?.temp_max|number: '1.0-0'}}
+              </small> -->
+            </ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 <div class="homeImg">
   <img src="https://www.fraaigelegenfarm.co.za/uploads/1/2/6/5/12654605/img-20190831-aerial-shots-bryce-02_orig.jpg" alt="">
   <!-- <h1>TULBAGH</h1> -->

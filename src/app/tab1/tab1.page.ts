@@ -3,9 +3,9 @@ import { ModalController } from '@ionic/angular';
 import { AttractionService } from 'src/app/stores/attraction';
 import { BlogQuery, BlogService } from 'src/app/stores/blog';
 import { TulbaghService } from 'src/app/stores/tulbagh';
-// import { WeatherQuery, WeatherService } from 'src/app/stores/weather';
+import { WeatherQuery, WeatherService } from 'src/app/stores/weather';
 // import { TopAttractionsPage } from '../top-attractions/top-attractions.page';
-// import { WeatherPage } from '../weather/weather.page';
+import { WeatherPage } from 'src/app/pages/weather/weather.page';
 
 @Component({
   selector: 'app-tab1',
@@ -20,9 +20,9 @@ export class Tab1Page implements OnInit {
   ready: boolean;
   constructor(
     private modalCtrl: ModalController,
-    // public weather: WeatherQuery,
+    public weather: WeatherQuery,
     private attractions: AttractionService,
-    // private weatherService: WeatherService,
+    private weatherService: WeatherService,
     private blogService: BlogService,
     public blogQuery: BlogQuery,
     private tulbaghService: TulbaghService
@@ -31,10 +31,10 @@ export class Tab1Page implements OnInit {
     this.attractions.getTop();
   }
 
-  // ionViewWillEnter() {
-  //   this.weatherService.getToday();
-  //   this.blogService.getList();
-  // }
+  ionViewWillEnter() {
+    this.weatherService.getToday();
+    this.blogService.getList();
+  }
 
   ionViewDidEnter() {
     this.ready = true;
@@ -49,13 +49,13 @@ export class Tab1Page implements OnInit {
   //   modal.present();
   // }
 
-  // async showWeather() {
-  //   const modal = await this.modalCtrl.create({
-  //     component: WeatherPage,
-  //   });
+  async showWeather() {
+    const modal = await this.modalCtrl.create({
+      component: WeatherPage,
+    });
 
-  //   modal.present();
-  // }
+    modal.present();
+  }
 
   async showAbout() {
     await this.tulbaghService.showAbout();

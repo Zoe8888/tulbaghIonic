@@ -33,6 +33,26 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'blog-details',
+    loadChildren: () => import('./pages/blog-details/blog-details.module').then( m => m.BlogDetailsPageModule)
+  },
+  {
+    path: 'weather',
+    loadChildren: () => import('./pages/weather/weather.module').then( m => m.WeatherPageModule)
+  },
+  {
+    path: 'business',
+    loadChildren: () => import('./pages/business/business.module').then( m => m.BusinessPageModule)
+  },
+  {
+    path: 'business-info',
+    loadChildren: () => import('./pages/business-info/business-info.module').then( m => m.BusinessInfoPageModule)
+  },
+  {
+    path: 'event-details',
+    loadChildren: () => import('./pages/event-details/event-details.module').then( m => m.EventDetailsPageModule)
   }
 ];
 @NgModule({

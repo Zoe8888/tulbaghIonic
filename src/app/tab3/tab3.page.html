@@ -1,70 +1,52 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
     <ion-title>Events</ion-title>
-    <ion-icon name="notifications" slot="end"></ion-icon>
-    <ion-icon name="menu" slot="end"></ion-icon>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-menu-button></ion-menu-button>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-title class="title">Coming up!</ion-title>
-
-  <ion-grid>
-      <ion-row class="event">
-      <ion-col>
-      <ion-icon size="large" name="calendar"></ion-icon>
-      </ion-col>
-      <ion-col size="5">
-          Family Picnic
-      </ion-col>
-      <ion-col size="5">
-        19:00 - 21:00
-      </ion-col>
-    </ion-row>
-    <ion-row class="event">
-      <ion-col>
-      <ion-icon size="large" name="calendar"></ion-icon>
-      </ion-col>
-      <ion-col size="5">Park Run 5km</ion-col>
-      <ion-col size="5">
-        08:30 - 12:00
-      </ion-col>
-    </ion-row>
-    <ion-row class="event">
-      <ion-col>
-      <ion-icon size="large" name="calendar"></ion-icon>
-      </ion-col>
-      <ion-col size="5">Golf Day</ion-col>
-      <ion-col size="5">
-        10:00 - 17:00
-      </ion-col>
-    </ion-row>
-    <ion-row class="event">
-      <ion-col>
-      <ion-icon size="large" name="calendar"></ion-icon>
-      </ion-col>
-      <ion-col size="5">Charity Drive</ion-col>
-      <ion-col size="5">
-        11:11 - 17:00
-      </ion-col>
-    </ion-row>
-    <ion-row class="event">
-      <ion-col>
-      <ion-icon size="large" name="calendar"></ion-icon>
-      </ion-col>
-      <ion-col size="5">Blues Concert</ion-col>
-      <ion-col size="5">
-        16:30 - 21:00
-      </ion-col>
-    </ion-row>
-    <ion-row class="event">
-      <ion-col>
-      <ion-icon size="large" name="calendar"></ion-icon>
-      </ion-col>
-      <ion-col size="5">Night Market</ion-col>
-      <ion-col size="5">
-        17:30 - 22:00
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-list lines="full">
+    <ion-list-header>
+      <ion-label>Coming up!</ion-label>
+    </ion-list-header>
+    <ng-container *ngFor="let event of eventQuery.list | async">
+      <ion-item detail="false" (click)="goTo(event)">
+        <div class="h-full inline-block" slot="start">
+          <div
+            class="
+              date
+              font-bold
+              text-center
+              overflow-hidden
+              rounded
+              w-12
+              my-0
+              mx-auto
+            "
+          >
+            <div class="month bg-primary text-white text-xs">
+              {{event.startDate | date: 'MMM'}}
+            </div>
+            <div class="bg-white">{{event.startDate | date: 'd'}}</div>
+            <div class="year bg-dark text-white text-xs">
+              {{event.startDate | date: 'YYYY'}}
+            </div>
+          </div>
+        </div>
+        <ion-label>
+          <h2>{{event?.title}}</h2>
+          <p>{{event.location}}</p>
+        </ion-label>
+        <ion-text slot="end">
+          <p class="m-0 text-xs">{{event.startDate | date: 'shortTime'}}</p>
+          <p class="m-0 text-xs">{{event.endDate | date: 'shortTime'}}</p>
+        </ion-text>
+      </ion-item>
+    </ng-container>
+  </ion-list>
 </ion-content>
