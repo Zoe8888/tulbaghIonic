@@ -8,7 +8,7 @@ export class LikedService {
 
   async getList() {
     return await this.http
-      .request('GET', 'show', {
+      .request('GET', 'profileList', {
         uniqueId: 'tulbagh-tourism-tulbagh',
         view: 'mine',
         format: 'json',

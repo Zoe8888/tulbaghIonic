@@ -30,7 +30,7 @@ export class TulbaghService {
     return await this.http
       .request('GET', 'wiki', {
         profile: 'tulbagh-tourism-tulbagh',
-        wikiId: 'tulbagh-tourism-tulbagh',
+        wikiId: '1012',
         format: 'json',
       })
       .then((result) => result[0]?.objectList[0]);

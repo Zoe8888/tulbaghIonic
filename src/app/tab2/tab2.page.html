@@ -1,41 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="title">
-      What's Hapenning
-    </ion-title>
-    <ion-icon name="notifications" slot="end"></ion-icon>
-    <ion-icon name="menu" slot="end"></ion-icon>
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title>Promotions</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-menu-button></ion-menu-button>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
+  <!-- <ion-toolbar>
+    <ion-chip slot="start">
+      <ion-icon name="funnel"></ion-icon>
+      <ion-label>Filter</ion-label>
+    </ion-chip>
+  </ion-toolbar> -->
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">What's happening this weekend</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-grid>
-    <ion-row class="row">
-      <div class="event">
-        <img src="https://www.sleeping-out.co.za/ftp/Events/Tulbagh-Christmas-in-Winter-2019-15645.jpg" alt="">
-      </div>
-    </ion-row>
-    <ion-row class="row">
-      <div class="concert">
-        <img src="https://i.pinimg.com/originals/6e/8e/f4/6e8ef4fa00a4a5a589d94d27c594e8d5.jpg" alt="">
-      </div>
-    </ion-row>
-    <ion-row class="row">
-      <div class="menu">
-        <img src="https://10619-2.s.cdn12.com/rests/original/321_509830846.jpg" alt="">
-      </div>
-    </ion-row>
-    <ion-row class="row">
-      <div class="tour">
-        <img src="https://s3.af-south-1.amazonaws.com/entryninja-uploads/editor-uploads%2F1624946650591-TulbaghMTBtour.jpg" alt="">
-      </div>
+<ion-content>
+  <ion-grid *ngIf="promotionQuery.selectAll() | async as blogs">
+    <ion-row *ngFor="let blog of blogs">
+      <ion-col>
+        <ion-card class="ion-no-margin">
+          <app-blog-item [blog]="blog" [color]="'primary'"></app-blog-item>
+        </ion-card>
+      </ion-col>
     </ion-row>
   </ion-grid>
-
 </ion-content>

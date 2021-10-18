@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { SharedModule } from 'src/app/shared/shared.module';
+
 import { IonicModule } from '@ionic/angular';
-import { Tab4PageRoutingModule } from './tab4-routing.module';
-import { Tab4Page } from './tab4.page';
+
+import { BusinessSearchPageRoutingModule } from './business-search-routing.module';
+
+import { BusinessSearchPage } from './business-search.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Tab4PageRoutingModule,
-    SharedModule
+    BusinessSearchPageRoutingModule
   ],
-  declarations: [Tab4Page]
+  declarations: [BusinessSearchPage]
 })
-export class Tab4PageModule {}
+export class BusinessSearchPageModule {}
