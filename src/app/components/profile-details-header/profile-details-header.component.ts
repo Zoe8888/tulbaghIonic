@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Share } from '@capacitor/share';
+import { NavController } from '@ionic/angular';
+import { ProfileService } from 'src/app/stores/profile';
+import { UserQuery } from 'src/app/stores/user';
 
 @Component({
   selector: 'app-profile-details-header',
@@ -9,16 +11,21 @@ import { Share } from '@capacitor/share';
 export class ProfileDetailsHeaderComponent implements OnInit {
   @Input() profile: any;
 
-  constructor() {}
+  constructor(
+    private navCtrl: NavController,
+    private profileService: ProfileService,
+    public userQuery: UserQuery
+  ) {}
 
   ngOnInit() {}
 
-  async share() {
-    await Share.share({
-      title: 'See cool stuff from Paarl',
-      text: 'Really awesome thing you need to see right meow',
-      url: 'https://nomadicways.travel/',
-      dialogTitle: 'Share with buddies',
+  goTo(uniqueId) {
+    this.navCtrl.navigateForward('profile-info', {
+      state: { uniqueId },
     });
+  }
+
+  async membership(profile) {
+    await this.profileService.membership(profile);
   }
 }

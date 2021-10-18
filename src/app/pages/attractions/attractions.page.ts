@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { AttractionQuery } from 'src/app/stores/attraction';
 
 @Component({
   selector: 'app-attractions',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttractionsPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private modalCtrl: ModalController,
+    public attractions: AttractionQuery
+  ) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  dismiss() {
+    this.modalCtrl.dismiss();
   }
 
 }

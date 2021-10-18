@@ -49,53 +49,37 @@
 <div class="homeImg">
   <img src="https://www.fraaigelegenfarm.co.za/uploads/1/2/6/5/12654605/img-20190831-aerial-shots-bryce-02_orig.jpg" alt="">
   <!-- <h1>TULBAGH</h1> -->
+  <div class="w-full absolute -bottom-6">
+    <ion-card class="m-2">
+      <ion-item lines="none" button (click)="showSearch()">
+        <ion-icon name="search-outline" slot="start"></ion-icon>
+        <ion-label> Search for a business </ion-label>
+      </ion-item>
+    </ion-card>
+  </div>
 </div>
-<div class="searchbar">
+<!-- <div class="searchbar">
   <ion-searchbar></ion-searchbar>
-</div>
+</div> -->
 
 <div class="px-1" *ngIf="ready">
   <app-discover-grid></app-discover-grid>
 </div>
-<!-- <ion-grid>
-    <ion-row class="row_1">
-      <ion-col class="col_1">
-        <ion-icon name="bed-outline" class="icon_dis" size='large'></ion-icon>Accommodation
-      </ion-col>
-      <ion-col class="col_2">
-        <ion-icon name="wine-outline" class="icon_dis" size='large'></ion-icon>Wineries
-      </ion-col>
-      <ion-col class="col_3">
-        <ion-icon name="fast-food-outline" class="icon_dis" size='large'></ion-icon>Food & Drinks
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="col_1">
-        <ion-icon name="business" class="icon_dis" size='large'></ion-icon>Businesses
-      </ion-col>
-      <ion-col class="col_2">
-        <ion-icon name="bicycle" class="icon_dis" size='large'></ion-icon>Activities
-      </ion-col>
-      <ion-col class="col_3">
-        <ion-icon name="heart" size='10' class="icon_dis" size='large'></ion-icon>Weddings
-      </ion-col>
-    </ion-row>
-  </ion-grid> -->
-<ion-button color="primary" class="btn_topA" animated>TOP ATTRACTIONS</ion-button>
+
+<div class="m-2">
+  <ion-button expand="block" (click)="showAttractions()">
+    TOP 10 ATTRACTIONS
+  </ion-button>
+</div>
 <ion-header class="keepUp">Keep up with Tulbagh</ion-header>
 
-<ion-list>
-  <ion-item>
-    <ion-label>10 Top Attractions</ion-label>
-    <ion-button>Blog</ion-button>
-  </ion-item>
-  <ion-item>
-    <ion-label>Best budget friendly accommodations</ion-label>
-    <ion-button>Blog</ion-button>
-  </ion-item>
-  <ion-item>
-    <ion-label>Fynbos Guest Farm & Animal Rehabilitation Sanctuary</ion-label>
-    <ion-button>Blog</ion-button>
-  </ion-item>
-</ion-list>
+<ion-grid>
+  <ion-row *ngFor="let blog of blogQuery.selectAll() | async as blogs">
+    <ion-col>
+      <ion-card class="ion-no-margin">
+        <app-blog-item [blog]="blog" [color]="'primary'"></app-blog-item>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>

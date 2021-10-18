@@ -4,8 +4,9 @@ import { AttractionService } from 'src/app/stores/attraction';
 import { BlogQuery, BlogService } from 'src/app/stores/blog';
 import { TulbaghService } from 'src/app/stores/tulbagh';
 import { WeatherQuery, WeatherService } from 'src/app/stores/weather';
-// import { TopAttractionsPage } from '../top-attractions/top-attractions.page';
+import { AttractionsPage } from 'src/app/pages/attractions/attractions.page';
 import { WeatherPage } from 'src/app/pages/weather/weather.page';
+import { BusinessSearchPage } from 'src/app/pages/business-search/business-search.page';
 
 @Component({
   selector: 'app-tab1',
@@ -40,14 +41,14 @@ export class Tab1Page implements OnInit {
     this.ready = true;
   }
 
-  // async showAttractions() {
-  //   this.attractions.getTop();
-  //   const modal = await this.modalCtrl.create({
-  //     component: TopAttractionsPage,
-  //   });
+  async showAttractions() {
+    this.attractions.getTop();
+    const modal = await this.modalCtrl.create({
+      component: AttractionsPage,
+    });
 
-  //   modal.present();
-  // }
+    modal.present();
+  }
 
   async showWeather() {
     const modal = await this.modalCtrl.create({
@@ -60,4 +61,26 @@ export class Tab1Page implements OnInit {
   async showAbout() {
     await this.tulbaghService.showAbout();
   }
+
+  // async showSearch() {
+  //   const modal = await this.modalCtrl.create({
+  //     component: BusinessSearchPage,
+  //     initialBreakpoint: 0.65,
+  //     breakpoints: [0, 0.65, 1],
+  //   });
+
+  //   modal.onDidDismiss().then(({ data }) => {
+  //     if (data) {
+  //       this.goTo(data);
+  //     }
+  //   });
+
+  //   return modal.present();
+  // }
+
+  // goTo(profile) {
+  //   this.navCtrl.navigateForward('business-info', {
+  //     state: { profile },
+  //   });
+  // }
 }

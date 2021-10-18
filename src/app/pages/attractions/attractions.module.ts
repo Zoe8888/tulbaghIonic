@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { SharedModule } from 'src/app/shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 
 import { AttractionsPageRoutingModule } from './attractions-routing.module';
@@ -13,8 +13,9 @@ import { AttractionsPage } from './attractions.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    AttractionsPageRoutingModule
+    AttractionsPageRoutingModule,
+    SharedModule
   ],
-  declarations: [AttractionsPage]
+  declarations: [AttractionsPage],
 })
 export class AttractionsPageModule {}
