@@ -10,6 +10,7 @@ import { UserQuery, UserService } from 'src/app/stores/user';
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup;
+  toastCtrl: any;
 
   constructor(
     public formBuilder: FormBuilder,
@@ -48,10 +49,19 @@ export class LoginPage implements OnInit {
 
     await this.userService
       .login(this.f.email.value.trim(), this.f.password.value)
-      .then((success) => {
+      .then(async (success) => {
         console.log(success);
         if (success) {
             this.navCtrl.navigateBack('');
+        } else {
+          const error = await this.toastCtrl.create({
+            color: 'danger',
+            position: 'top',
+            message: 'The credentials are incorrect, please try again',
+            duration: 3000,
+          });
+
+          error.present();
         }
       });
   }

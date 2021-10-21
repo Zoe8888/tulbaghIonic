@@ -12,7 +12,7 @@ export class BusinessSearchPage implements OnInit {
   searchProfiles: any[];
   constructor(
     private modalCtrl: ModalController,
-    private profileService: ProfileService
+    private profileService: ProfileService,
   ) {}
 
   ngOnInit() {}

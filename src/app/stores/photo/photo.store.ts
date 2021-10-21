@@ -6,7 +6,8 @@ export interface PhotoState extends EntityState<Photo> {}
 
 @Injectable({ providedIn: 'root' })
 @StoreConfig({
-  name: 'photo'
+  name: 'photo',
+  idKey: 'photoId',
 })
 export class PhotoStore extends EntityStore<PhotoState> {
 

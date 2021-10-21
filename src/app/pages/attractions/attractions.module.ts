@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { SharedModule } from 'src/app/shared/shared.module';
+
 import { IonicModule } from '@ionic/angular';
 
 import { AttractionsPageRoutingModule } from './attractions-routing.module';
@@ -13,9 +13,9 @@ import { AttractionsPage } from './attractions.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    AttractionsPageRoutingModule,
-    SharedModule
+    AttractionsPageRoutingModule
   ],
   declarations: [AttractionsPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AttractionsPageModule {}

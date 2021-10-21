@@ -70,7 +70,7 @@ export class ProfileService {
         ? 'Profile successfully followed'
         : 'Profile successfully unfollowed',
       color: followed ? 'success' : 'dark',
-      // icon: followed ? 'heart' : 'heart-dislike',
+      icon: followed ? 'heart' : 'heart-dislike',
       duration: 2000,
     });
     toast.present();

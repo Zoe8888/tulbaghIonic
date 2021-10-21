@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import { AttractionService } from 'src/app/stores/attraction';
 import { BlogQuery, BlogService } from 'src/app/stores/blog';
 import { TulbaghService } from 'src/app/stores/tulbagh';
@@ -21,12 +21,13 @@ export class Tab1Page implements OnInit {
   ready: boolean;
   constructor(
     private modalCtrl: ModalController,
+    private navCtrl: NavController,
     public weather: WeatherQuery,
     private attractions: AttractionService,
     private weatherService: WeatherService,
     private blogService: BlogService,
     public blogQuery: BlogQuery,
-    private tulbaghService: TulbaghService
+    private tulbaghService: TulbaghService,
   ) {}
   ngOnInit() {
     this.attractions.getTop();
@@ -78,9 +79,9 @@ export class Tab1Page implements OnInit {
   //   return modal.present();
   // }
 
-  // goTo(profile) {
-  //   this.navCtrl.navigateForward('business-info', {
-  //     state: { profile },
-  //   });
-  // }
+  goTo(profile) {
+    this.navCtrl.navigateForward('business-info', {
+      state: { profile },
+    });
+  }
 }

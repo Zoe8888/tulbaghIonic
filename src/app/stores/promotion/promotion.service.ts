@@ -12,7 +12,7 @@ export class PromotionService {
   async getList() {
     return await this.http
       .request('GET', 'blogList', {
-        profile: 'tulbagh-promotions',
+        profile: 'tulbagh-tourism-tulbagh',
         format: 'json',
       })
       .then((result) => {

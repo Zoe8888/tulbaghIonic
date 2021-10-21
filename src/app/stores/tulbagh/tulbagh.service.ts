@@ -28,9 +28,8 @@ export class TulbaghService {
 
   async getInfo() {
     return await this.http
-      .request('GET', 'wiki', {
-        profile: 'tulbagh-tourism-tulbagh',
-        wikiId: '1012',
+      .request('GET', 'show', {
+        uniqueId: 'tulbagh-tourism-tulbagh',
         format: 'json',
       })
       .then((result) => result[0]?.objectList[0]);

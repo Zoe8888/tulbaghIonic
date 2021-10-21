@@ -18,26 +18,25 @@ export class ProfileInfoPage implements OnInit {
   uniqueId: any;
   wiki: any;
 
-  // options: L.MapOptions = {
-  //   layers: [
-  //     tileLayer(
-  //       // eslint-disable-next-line max-len
-  //       'https://{s}.
-  //tile.jawg.io/jawg-streets/{z}/{x}/{y}{r}.png?access-token=r5DE8X2qpUTOW5p9BdP2DbeQRXMjzGlxs870VpzJCl5wMsy5tMt7bPKdBx7yIc8S',
-  //       {
-  //         maxZoom: 18,
-  //       }
-  //     ),
-  //   ],
-  //   minZoom: 5,
-  //   zoom: 12,
-  //   maxZoom: 15,
-  //   center: latLng(-33.715546, 18.966248),
-  //   scrollWheelZoom: false,
-  //   tap: false,
-  //   zoomControl: false,
-  //   attributionControl: false,
-  // };
+  options: L.MapOptions = {
+    layers: [
+      tileLayer(
+        // eslint-disable-next-line max-len
+        'https://{s}.tile.jawg.io/jawg-streets/{z}/{x}/{y}{r}.png?access-token=r5DE8X2qpUTOW5p9BdP2DbeQRXMjzGlxs870VpzJCl5wMsy5tMt7bPKdBx7yIc8S',
+        {
+          maxZoom: 18,
+        }
+      ),
+    ],
+    minZoom: 5,
+    zoom: 12,
+    maxZoom: 15,
+    center: latLng(-33.715546, 18.966248),
+    scrollWheelZoom: false,
+    tap: false,
+    zoomControl: false,
+    attributionControl: false,
+  };
 
   center: LatLng;
   ready: boolean;
@@ -97,7 +96,7 @@ export class ProfileInfoPage implements OnInit {
     }
   }
 
-  // onMapReady(map: L.Map) {}
+  onMapReady(map: L.Map) {}
 
   async takeMeThere() {
     if (Capacitor.isNativePlatform()) {
