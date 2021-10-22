@@ -63,21 +63,21 @@ export class Tab1Page implements OnInit {
     await this.tulbaghService.showAbout();
   }
 
-  // async showSearch() {
-  //   const modal = await this.modalCtrl.create({
-  //     component: BusinessSearchPage,
-  //     initialBreakpoint: 0.65,
-  //     breakpoints: [0, 0.65, 1],
-  //   });
+  async showSearch() {
+    const modal = await this.modalCtrl.create({
+      component: BusinessSearchPage,
+      initialBreakpoint: 0.65,
+      breakpoints: [0, 0.65, 1],
+    });
 
-  //   modal.onDidDismiss().then(({ data }) => {
-  //     if (data) {
-  //       this.goTo(data);
-  //     }
-  //   });
+    modal.onDidDismiss().then(({ data }) => {
+      if (data) {
+        this.goTo(data);
+      }
+    });
 
-  //   return modal.present();
-  // }
+    return modal.present();
+  }
 
   goTo(profile) {
     this.navCtrl.navigateForward('business-info', {
