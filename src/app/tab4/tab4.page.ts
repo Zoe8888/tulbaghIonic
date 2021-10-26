@@ -8,15 +8,13 @@ import { LikedQuery, LikedService } from 'src/app/stores/liked';
   styleUrls: ['./tab4.page.scss'],
 })
 export class Tab4Page implements OnInit {
-
   constructor(
     private likedService: LikedService,
     public likedQuery: LikedQuery,
     private navCtrl: NavController
-  ) { }
+  ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ionViewWillEnter() {
     this.likedService.getList();

@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { EntityState, EntityStore, StoreConfig } from '@datorama/akita';
-import { Tulbagh } from './tulbagh.model';
+import { Store, StoreConfig } from '@datorama/akita';
 
-export interface TulbaghState extends EntityState<Tulbagh> {
+export interface TulbaghState {
   about: string;
 }
 
@@ -11,13 +10,9 @@ export const createInitialState = (): TulbaghState => ({
 });
 
 @Injectable({ providedIn: 'root' })
-@StoreConfig({
-  name: 'tulbagh'
-})
-export class TulbaghStore extends EntityStore<TulbaghState> {
-
+@StoreConfig({ name: 'tulbagh' })
+export class TulbaghStore extends Store<TulbaghState> {
   constructor() {
     super(createInitialState());
   }
-
 }

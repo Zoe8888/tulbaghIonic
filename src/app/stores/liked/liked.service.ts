@@ -12,6 +12,7 @@ export class LikedService {
         uniqueId: 'tulbagh-tourism-tulbagh',
         view: 'mine',
         format: 'json',
+        category: 'businesses',
       })
       .then((result) => {
         if (result[0]?.objectList?.length > 0) {

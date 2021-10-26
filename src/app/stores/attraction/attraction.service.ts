@@ -13,7 +13,7 @@ export class AttractionService {
     return await this.http
       .request('GET', 'profileList', {
         profile: 'tulbagh-tourism-tulbagh',
-        list: 'Top 10 Attractions',
+        list: 'Top Attractions',
         radius: '20000',
         sort: 'alpha',
         format: 'json',

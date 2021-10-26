@@ -12,7 +12,7 @@ export class BusinessService {
   async getList(list) {
     return await this.http.request('GET', 'profileList', {
       profile: 'tulbagh-tourism-tulbagh',
-      list,
+      list: 'activities',
       radius: '20000',
       sort: 'alpha',
       format: 'json',

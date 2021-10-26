@@ -15,7 +15,7 @@ export class TulbaghService {
   async getAbout() {
     return await this.http
       .request('GET', 'wiki', {
-        profile: 'tulbagh-tourism-tulbagh',
+        profile: 'tulbagh',
         subject: 'About Tulbagh',
         format: 'json',
       })
